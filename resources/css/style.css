@@ -1,0 +1,157 @@
+body, h1,h2,h3,h4,h5,h6{font-family: "Lato", sans-serif}
+
+.w3-row-padding img {margin-bottom: 12px}
+
+.w3-sidebar {width: 120px; background: #222;}
+
+.w3-button {color: white}
+
+#main, #alert {margin-left: 120px}
+
+#alert {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.hide {display: none}
+
+/* Using Legacy Kahoot BG for RGB login/register forms */
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+
+/*Applies the rgb background to any form with this class*/
+.modalFormsRGB {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+/*Sets Login/Register form backgrounds to be consistent with sidebar colour scheme*/
+.w3-modal .modalFormsBody{
+     background-color: #222; 
+     color: white;
+}
+
+#header {
+    background-color: #222; 
+    color: white;
+}
+
+.inLineIMG {
+    margin-left: 5px;
+}
+
+.defaultTheme {
+    background-color: #222; 
+    color: white;
+    width: 100%;
+}
+
+.defaultTheme2 {
+    background-color: #222;
+    color: white;
+}
+
+.hideUnlessHover {
+    display: none;
+}
+
+.eventImage {
+    width: 100%;
+    max-height: 450px;
+}
+
+/* Different to .eventImage, used for the event modal */
+/* Only ever used !important bc w3.css did, it's annoying how often they used it */
+#eventImage {
+    width: 100%!important;
+    max-height: 450px;
+    margin: 0!important;
+}
+
+#eventTitle {
+    display:inline-block;
+    margin-right: 10px;
+}
+
+#eventURL {
+    display:none;
+}
+
+#submitBooking {
+    margin-right: 8%;
+}
+
+#likeEvent {
+    width: 9%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#likeEvent:hover {
+    background-color: inherit!important;
+    color: red!important;
+}
+
+.eventDisplay:hover {
+    cursor: pointer;
+}
+
+.eventDisplay:hover .hideUnlessHover {
+    display: block;
+}
+
+.eventDisplay:hover .eventImage {
+    opacity: 0.75;
+}
+
+.w3-modal .marginalise {margin-top: 5px; margin-right: 5px;}
+
+/*Used to centre a button already in a container */
+.w3-container .centerButton {
+    text-align: center;
+    /* margin-top: 30px; */
+}
+
+#alert .marginalise {margin-right: 5px}
+
+/*Resizes elements to be responsive to smaller devices/window size changes*/
+@media only screen and (max-width: 800px), (max-height: 700px) {
+    #myNavbar {display: block}
+    #main, #alert {margin-left: 0; margin-top: 34px}
+    #sidebar {display: none}
+}
+
+/* Resizes the login and register modals to only go as wide as 400px */
+@media (min-width: 601px) {
+    .w3-modal .w3-modal-content {
+        width: 400px;
+    }
+}
+
+/* Resizes the eventForm modal to only go as wide as 600px */
+@media (min-width: 601px) {
+    #eventForm .w3-modal-content{
+        width: 600px;
+    }
+}
